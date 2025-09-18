@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-09-18T06:23:42.409Z",
+    "end": "2025-09-18T06:23:56.224Z",
+    "duration": 13815,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "88f80f1c-2eed-47f7-bf42-07234fc79478",
+      "title": "",
+      "fullFile": "cypress\\e2e\\lab1.cy.js",
+      "file": "cypress\\e2e\\lab1.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3f2d9d79-4fe8-473d-9ed9-ef7fab523e57",
+          "title": "Lab 1: Wikipedia History Navigation & Viewport Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should navigate history and test responsive layout",
+              "fullTitle": "Lab 1: Wikipedia History Navigation & Viewport Test should navigate history and test responsive layout",
+              "timedOut": null,
+              "duration": 7124,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// 1. Visit the English Wikipedia main page directly\ncy.visit('https://en.wikipedia.org/wiki/Main_Page');\n// 2. (Skip step 1->2 cross-origin issue: already on English Wikipedia)\n// 3. Click on \"Today’s featured article\" link\ncy.get('#mp-tfa a').eq(1).click(); // pick an article link inside featured section\ncy.url().should('include', '/wiki/');\n// 4. Go back in history → return to Main Page-\ncy.go('back');\ncy.url().should('include', 'Main_Page');\n// 6. Test mobile viewport before forward navigation\ncy.viewport('iphone-x'); // simulate mobile device\n// 5. Go forward in history → return to featured article page\ncy.go('forward');\ncy.get('#firstHeading').should('exist'); // heading present",
+              "err": {},
+              "uuid": "0ac83ddd-2572-407b-8442-9bd1575eca4b",
+              "parentUUID": "3f2d9d79-4fe8-473d-9ed9-ef7fab523e57",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0ac83ddd-2572-407b-8442-9bd1575eca4b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7124,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "reportPageTitle": "OrangeHRM Test Report",
+        "inlineAssets": true
+      },
+      "version": "6.3.0"
+    }
+  }
+}

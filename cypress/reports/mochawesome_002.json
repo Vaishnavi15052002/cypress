@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-09-18T06:26:07.784Z",
+    "end": "2025-09-18T06:26:17.839Z",
+    "duration": 10055,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0e5ac69d-e6cf-4682-824d-356464114301",
+      "title": "",
+      "fullFile": "cypress\\e2e\\days\\screenshot.cy.js",
+      "file": "cypress\\e2e\\days\\screenshot.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "87a25c72-e86f-4482-b3af-ec3b3b15a3a8",
+          "title": "OrangeHRM Screenshot Examples",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "demonstrates screenshot capabilities",
+              "fullTitle": "OrangeHRM Screenshot Examples demonstrates screenshot capabilities",
+              "timedOut": null,
+              "duration": 9888,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Visit login page\ncy.visit('/web/index.php/auth/login');\n// Capture entire page\ncy.screenshot('login-page');\n// Capture specific element\ncy.get('.orangehrm-login-branding').screenshot('login-logo');\n// Fill login form\ncy.get('input[name=\"username\"]').type('Admin');\ncy.get('input[name=\"password\"]').type('admin123');\n// Capture filled form\ncy.screenshot('login-form-filled');\n// Submit form\ncy.get('button[type=\"submit\"]').click();\n// Verify dashboard and capture\ncy.url().should('include', '/dashboard');\ncy.screenshot('dashboard-page');",
+              "err": {},
+              "uuid": "c1e01017-2ef7-47fa-996f-1978e3259a5b",
+              "parentUUID": "87a25c72-e86f-4482-b3af-ec3b3b15a3a8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c1e01017-2ef7-47fa-996f-1978e3259a5b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9888,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "reportPageTitle": "OrangeHRM Test Report",
+        "inlineAssets": true
+      },
+      "version": "6.3.0"
+    }
+  }
+}

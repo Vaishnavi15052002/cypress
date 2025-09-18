@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "cypress": "^15.2.0",
+    "mocha": "^11.7.2",
+    "mochawesome": "^7.1.4",
+    "mochawesome-merge": "^5.0.0"
+  }
+}
